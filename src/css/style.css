@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+  background-image: url(https://cs12.pikabu.ru/post_img/big/2019/08/18/8/1566133645111292467.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.capital-country,
+.population-country,
+.lang-country,
+.list-lang {
+  font-weight: bold;
+  list-style-position: inside;
+  color: #dec614;
+  font-size: 16pt;
+}
+
+.country-name {
+  text-decoration: underline;
+  color: #dec614;
+  font-size: 22pt;
+}
+.card,
+.search {
+  margin-top: 100px;
+}
+
+.search {
+  height: 50px;
+  font-size: 12pt;
+  background-color: green;
+  color: white;
+}
+
+.search::placeholder {
+  color: white;
+}
