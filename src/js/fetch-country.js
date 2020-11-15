@@ -25,10 +25,14 @@ function onSearch(e) {
   }
 
 function markupCard(country) {
-   if (country.length === 1) {
-    createMarkupCard(country);
+  if (country.length === 1) {
+    const marupCardCountry = countryCard(country);
+     refs.cardCountry.insertAdjacentHTML('beforeend', marupCardCountry);
+    // createMarkupCard(country);
   } else if (country.length > 1 && country.length <= 10) {
-    createMarkupList(country);
+    // createMarkupList(country);
+    const markupListCountry = countryList(country);
+    refs.cardCountry.insertAdjacentHTML('beforeend', markupListCountry);
   } else if (country.length > 10) {
     error({
       title: 'Too many matches found. Please enter a more specific query!',
@@ -37,15 +41,15 @@ function markupCard(country) {
   }
 }
 
-function createMarkupCard(country) {
-  const markup = countryCard(country);
-  refs.cardCountry.insertAdjacentHTML('beforeend', markup);
-}
+// function createMarkupCard(country) {
+//   const markup = countryCard(country);
+//   refs.cardCountry.insertAdjacentHTML('beforeend', markup);
+// }
 
-function createMarkupList(country) {
-  const markup = countryList(country);
-  refs.cardCountry.insertAdjacentHTML('beforeend', markup);
-}
+// function createMarkupList(country) {
+//   const markup = countryList(country);
+//   refs.cardCountry.insertAdjacentHTML('beforeend', markup);
+// }
 
 function clearContainer() {
   refs.cardCountry.innerHTML = ' ';
